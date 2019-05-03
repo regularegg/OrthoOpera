@@ -250,6 +250,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BugName: {fileID: 2098177215}
   BugInfo: {fileID: 424250267}
+  BugPicture: {fileID: 0}
 --- !u!1 &159917884
 GameObject:
   m_ObjectHideFlags: 0
@@ -617,7 +618,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72a73e17b5520446687448f42ed3a3c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IAP: {fileID: 0}
+  IAP: {fileID: 726693379}
   bugArrayIndex: 0
   img: {fileID: 0}
   playing: {fileID: 21300000, guid: e53a6c1c22d9f469aa61d338cab49e7d, type: 3}
@@ -763,7 +764,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72a73e17b5520446687448f42ed3a3c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IAP: {fileID: 0}
+  IAP: {fileID: 573881197}
   bugArrayIndex: 0
   img: {fileID: 0}
   playing: {fileID: 21300000, guid: e53a6c1c22d9f469aa61d338cab49e7d, type: 3}
@@ -988,7 +989,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72a73e17b5520446687448f42ed3a3c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IAP: {fileID: 0}
+  IAP: {fileID: 573881197}
   bugArrayIndex: 0
   img: {fileID: 0}
   playing: {fileID: 21300000, guid: e53a6c1c22d9f469aa61d338cab49e7d, type: 3}
@@ -1044,7 +1045,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72a73e17b5520446687448f42ed3a3c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IAP: {fileID: 0}
+  IAP: {fileID: 1907257709}
   bugArrayIndex: 0
   img: {fileID: 0}
   playing: {fileID: 21300000, guid: e53a6c1c22d9f469aa61d338cab49e7d, type: 3}
@@ -1427,7 +1428,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72a73e17b5520446687448f42ed3a3c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IAP: {fileID: 0}
+  IAP: {fileID: 1907257709}
   bugArrayIndex: 0
   img: {fileID: 0}
   playing: {fileID: 21300000, guid: e53a6c1c22d9f469aa61d338cab49e7d, type: 3}
@@ -1614,7 +1615,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -1712,10 +1713,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AS: {fileID: 0}
-  Sound: {fileID: 0}
-  Silence: {fileID: 0}
+  Sound: {fileID: 8300000, guid: 0d329340f973441939d285add1849ca3, type: 3}
+  Silence: {fileID: 8300000, guid: eb8bb677db7da4c71bc7972480565869, type: 3}
   Playing: 
   CurrentClipPlaying: 0
+  AmountOfClips: 2
 --- !u!1 &588279958
 GameObject:
   m_ObjectHideFlags: 0
@@ -1846,7 +1848,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72a73e17b5520446687448f42ed3a3c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IAP: {fileID: 0}
+  IAP: {fileID: 1907257709}
   bugArrayIndex: 0
   img: {fileID: 0}
   playing: {fileID: 21300000, guid: e53a6c1c22d9f469aa61d338cab49e7d, type: 3}
@@ -2033,7 +2035,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -2132,9 +2134,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AS: {fileID: 0}
   Sound: {fileID: 0}
-  Silence: {fileID: 0}
+  Silence: {fileID: 8300000, guid: eb8bb677db7da4c71bc7972480565869, type: 3}
   Playing: 
   CurrentClipPlaying: 0
+  AmountOfClips: 3
 --- !u!1 &746359426
 GameObject:
   m_ObjectHideFlags: 0
@@ -2784,11 +2787,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SM: {fileID: 0}
-  CI: {fileID: 0}
-  Bug: {fileID: 0}
-  BugName: 
-  BugInfo: 
-  Cam: {fileID: 0}
+  CI: {fileID: 81444866}
+  Bug: {fileID: 21300000, guid: 0b06742f04eac4bebb17b047bf0321c9, type: 3}
+  BugName: Bug A
+  BugInfo: hlo my name is Bug A and welcome to my crib
+  Cam: {fileID: 1688981025}
 --- !u!1 &1067028089
 GameObject:
   m_ObjectHideFlags: 0
@@ -3078,7 +3081,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72a73e17b5520446687448f42ed3a3c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IAP: {fileID: 0}
+  IAP: {fileID: 726693379}
   bugArrayIndex: 0
   img: {fileID: 0}
   playing: {fileID: 21300000, guid: e53a6c1c22d9f469aa61d338cab49e7d, type: 3}
@@ -3258,7 +3261,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -3357,9 +3360,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AS: {fileID: 0}
   Sound: {fileID: 0}
-  Silence: {fileID: 0}
+  Silence: {fileID: 8300000, guid: eb8bb677db7da4c71bc7972480565869, type: 3}
   Playing: 
   CurrentClipPlaying: 0
+  AmountOfClips: 2
 --- !u!1 &1356663460
 GameObject:
   m_ObjectHideFlags: 0
@@ -3602,7 +3606,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72a73e17b5520446687448f42ed3a3c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IAP: {fileID: 0}
+  IAP: {fileID: 726693379}
   bugArrayIndex: 0
   img: {fileID: 0}
   playing: {fileID: 21300000, guid: e53a6c1c22d9f469aa61d338cab49e7d, type: 3}
@@ -4111,7 +4115,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72a73e17b5520446687448f42ed3a3c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IAP: {fileID: 0}
+  IAP: {fileID: 1328838900}
   bugArrayIndex: 0
   img: {fileID: 0}
   playing: {fileID: 21300000, guid: e53a6c1c22d9f469aa61d338cab49e7d, type: 3}
@@ -4298,7 +4302,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -4397,9 +4401,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AS: {fileID: 0}
   Sound: {fileID: 0}
-  Silence: {fileID: 0}
+  Silence: {fileID: 8300000, guid: eb8bb677db7da4c71bc7972480565869, type: 3}
   Playing: 
   CurrentClipPlaying: 0
+  AmountOfClips: 3
 --- !u!1 &2005244685
 GameObject:
   m_ObjectHideFlags: 0
@@ -5042,7 +5047,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72a73e17b5520446687448f42ed3a3c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IAP: {fileID: 0}
+  IAP: {fileID: 1328838900}
   bugArrayIndex: 0
   img: {fileID: 0}
   playing: {fileID: 21300000, guid: e53a6c1c22d9f469aa61d338cab49e7d, type: 3}

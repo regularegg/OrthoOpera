@@ -15,9 +15,16 @@ public class IndividualAudioPlayer : MonoBehaviour
     
     public bool[] Playing;
     public int CurrentClipPlaying;
+
+    public int AmountOfClips;
     
     void Start()
     {
+        Playing = new bool[AmountOfClips];
+        for (int i = 0; i < AmountOfClips; i++)
+        {
+            Playing[i] = false;
+        }
         CurrentClipPlaying = 0;
         AS = GetComponent<AudioSource>();
     }
@@ -31,7 +38,7 @@ public class IndividualAudioPlayer : MonoBehaviour
         {
             //STEP 1.
             //if the current clip is the last clip in the array, restart the index to 0
-            if (CurrentClipPlaying == Playing.Length)
+            if (CurrentClipPlaying == AmountOfClips-1)
             {
                 CurrentClipPlaying = 0;
             }
