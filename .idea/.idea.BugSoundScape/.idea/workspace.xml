@@ -2,23 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="83b77c06-66b5-4602-9515-df6bd98e4007" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Library/CrashedAssetImports.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Temp/UnityTempFile-df52da8dd521d424c85a408254cdbfad" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Temp/UnityTempFile-e58dfc37e21ca4f7fb6b51575a02652a" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Temp/__Backupscenes/0.backup" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BugSoundScape/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BugSoundScape/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/PlayScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/PlayScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Sound Playing Scripts/IndividualAudioPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Sound Playing Scripts/IndividualAudioPlayer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/InspectorExpandedItems.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Library/InspectorExpandedItems.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Info Box scripts/GoToInfobox.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Info Box scripts/GoToInfobox.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/CrashedAssetImports.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/ProtocolInstance.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ProtocolInstance.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/StateCache/Hierarchy/c328d0-mainStage.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/Hierarchy/c328d0-mainStage.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/StateCache/SceneView/0cbd9a-mainStage.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/SceneView/0cbd9a-mainStage.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/assetDatabase3" beforeDir="false" afterPath="$PROJECT_DIR$/Library/assetDatabase3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/1c/1c3e36c9ab7ab42ebbfa6b3ffae9a580" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/1c/1c3e36c9ab7ab42ebbfa6b3ffae9a580" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/1c/1c3e36c9ab7ab42ebbfa6b3ffae9a580.info" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/1c/1c3e36c9ab7ab42ebbfa6b3ffae9a580.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/c5/c5f366dd099304b1a81e0a743ea4c86f" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/c5/c5f366dd099304b1a81e0a743ea4c86f" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler0.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Temp/__Backupscenes/0.backup" beforeDir="false" afterPath="$PROJECT_DIR$/Temp/__Backupscenes/0.backup" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -42,12 +38,12 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cs" value="10930" />
+          <entry key="cs" value="11006" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="C#" value="10930" />
+          <entry key="C#" value="11006" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -95,19 +91,21 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Info Box scripts/GoToInfobox.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="334">
-              <caret line="33" column="63" selection-start-line="33" selection-start-column="63" selection-end-line="33" selection-end-column="63" />
+            <state relative-caret-position="540">
+              <caret line="62" column="92" selection-start-line="62" selection-start-column="92" selection-end-line="62" selection-end-column="92" />
               <folding>
-                <marker date="1556905781039" expanded="false" signature="6:78" ph="..." />
-                <marker date="1556905781039" expanded="true" signature="120:1673" ph="{...}" />
-                <marker date="1556905781039" expanded="true" signature="127:774" ph="/* INSTRUCTIONS ... */" />
-                <marker date="1556905781039" expanded="true" signature="938:993" ph="{...}" />
-                <marker date="1556905781039" expanded="true" signature="1032:1339" ph="{...}" />
-                <marker date="1556905781039" expanded="true" signature="1369:1671" ph="{...}" />
-                <marker date="1556905781039" expanded="true" signature="1484:1665" ph="{...}" />
+                <marker date="1556906923360" expanded="false" signature="6:78" ph="..." />
+                <marker date="1556906923360" expanded="true" signature="120:1905" ph="{...}" />
+                <marker date="1556906923360" expanded="true" signature="127:774" ph="/* INSTRUCTIONS ... */" />
+                <marker date="1556906923360" expanded="true" signature="965:1024" ph="{...}" />
+                <marker date="1556906923360" expanded="true" signature="1063:1476" ph="{...}" />
+                <marker date="1556906923360" expanded="true" signature="1225:1342" ph="{...}" />
+                <marker date="1556906923360" expanded="true" signature="1355:1461" ph="{...}" />
+                <marker date="1556906923360" expanded="true" signature="1506:1903" ph="{...}" />
+                <marker date="1556906923360" expanded="true" signature="1621:1897" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -138,7 +136,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Sound Playing Scripts/HolderBehavior.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-169">
@@ -201,8 +199,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/HolderBehavior.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SceneManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Info Box scripts/ChangeInfo.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Info Box scripts/GoToInfobox.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Sound Playing Scripts/IndividualAudioPlayer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Info Box scripts/GoToInfobox.cs" />
       </list>
     </option>
   </component>
@@ -309,12 +307,12 @@
       <workItem from="1556080304260" duration="4087000" />
       <workItem from="1556111473154" duration="1841000" />
       <workItem from="1556718804850" duration="3121000" />
-      <workItem from="1556900053009" duration="5389000" />
+      <workItem from="1556900053009" duration="5867000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23779000" />
+    <option name="totallyTimeSpent" value="24257000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -488,22 +486,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Info Box scripts/GoToInfobox.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="33" column="63" selection-start-line="33" selection-start-column="63" selection-end-line="33" selection-end-column="63" />
-          <folding>
-            <marker date="1556905781039" expanded="false" signature="6:78" ph="..." />
-            <marker date="1556905781039" expanded="true" signature="120:1673" ph="{...}" />
-            <marker date="1556905781039" expanded="true" signature="127:774" ph="/* INSTRUCTIONS ... */" />
-            <marker date="1556905781039" expanded="true" signature="938:993" ph="{...}" />
-            <marker date="1556905781039" expanded="true" signature="1032:1339" ph="{...}" />
-            <marker date="1556905781039" expanded="true" signature="1369:1671" ph="{...}" />
-            <marker date="1556905781039" expanded="true" signature="1484:1665" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Sound Playing Scripts/IndividualAudioPlayer.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="337">
@@ -540,6 +522,24 @@
             <marker date="1556903924917" expanded="true" signature="1290:1359" ph="{...}" />
             <marker date="1556903924917" expanded="true" signature="1640:1689" ph="{...}" />
             <marker date="1556903924917" expanded="true" signature="1721:1798" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Info Box scripts/GoToInfobox.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="62" column="92" selection-start-line="62" selection-start-column="92" selection-end-line="62" selection-end-column="92" />
+          <folding>
+            <marker date="1556906923360" expanded="false" signature="6:78" ph="..." />
+            <marker date="1556906923360" expanded="true" signature="120:1905" ph="{...}" />
+            <marker date="1556906923360" expanded="true" signature="127:774" ph="/* INSTRUCTIONS ... */" />
+            <marker date="1556906923360" expanded="true" signature="965:1024" ph="{...}" />
+            <marker date="1556906923360" expanded="true" signature="1063:1476" ph="{...}" />
+            <marker date="1556906923360" expanded="true" signature="1225:1342" ph="{...}" />
+            <marker date="1556906923360" expanded="true" signature="1355:1461" ph="{...}" />
+            <marker date="1556906923360" expanded="true" signature="1506:1903" ph="{...}" />
+            <marker date="1556906923360" expanded="true" signature="1621:1897" ph="{...}" />
           </folding>
         </state>
       </provider>

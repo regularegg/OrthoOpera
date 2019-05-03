@@ -24,9 +24,11 @@ public class GoToInfobox : MonoBehaviour
     public string BugName, BugInfo;
     public GameObject Cam;
 
+    public bool LazyMove;
+
     void Start()
     {
-        SM = GetComponent<SceneManager>();
+        SM = FindObjectOfType<SceneManager>();
     }
 
     public void ChangeScenePosition()
@@ -34,21 +36,31 @@ public class GoToInfobox : MonoBehaviour
         //Change the BugInfo screen to match the insect clicked
         CI.BugName.text = BugName;
         CI.BugInfo.text = BugInfo;
+        if (LazyMove)
+        {
+            
+            //Lazy Move
+            Cam.transform.position = SM.Camera_InfoScreen;
+
+        }
+        else
+        {
+            //Lerp Camera to position move
+            StartCoroutine(MoveCamera());
+
+        }
         
-        //Lazy Move
-        Cam.transform.position = SM.Camera_InfoScreen;
-        //Lerp Camera to position move
-        StartCoroutine(MoveCamera());
     }
 
     IEnumerator MoveCamera()
     {
         WaitForEndOfFrame wait = new WaitForEndOfFrame();
-        int count = 0;
-        while (count < 100)
+        float count = 0;
+        while (count < 1)
         {
-            Cam.transform.position = Vector3.Lerp(SM.Camera_InfoScreen, SM.Camera_MusicPlayerScreen, count);
-            count++;
+            Cam.transform.position = Vector3.Lerp(SM.Camera_MusicPlayerScreen, SM.Camera_InfoScreen, count);
+            count+=0.01f;
+            Debug.Log(Vector3.Lerp(SM.Camera_InfoScreen, SM.Camera_MusicPlayerScreen, count));
             yield return wait;
         }
     }
