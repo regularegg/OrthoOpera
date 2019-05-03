@@ -47,7 +47,6 @@ public class GoToInfobox : MonoBehaviour
         {
             //Lerp Camera to position move
             StartCoroutine(MoveCamera());
-
         }
         
     }
@@ -60,7 +59,6 @@ public class GoToInfobox : MonoBehaviour
         {
             Cam.transform.position = Vector3.Lerp(SM.Camera_MusicPlayerScreen, SM.Camera_InfoScreen, count);
             count+=0.01f;
-            Debug.Log(Vector3.Lerp(SM.Camera_InfoScreen, SM.Camera_MusicPlayerScreen, count));
             yield return wait;
         }
     }

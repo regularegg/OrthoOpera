@@ -2174,6 +2174,7 @@ GameObject:
   - component: {fileID: 746359429}
   - component: {fileID: 746359431}
   - component: {fileID: 746359430}
+  - component: {fileID: 746359432}
   m_Layer: 5
   m_Name: BUTTON1 (3)
   m_TagString: Untagged
@@ -2284,16 +2285,16 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 746359430}
+  m_TargetGraphic: {fileID: 1017324132}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: 
+      - m_Target: {fileID: 746359432}
+        m_MethodName: ChangeScenePosition
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2338,6 +2339,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 746359426}
   m_CullTransparentMesh: 0
+--- !u!114 &746359432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 746359426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5f366dd099304b1a81e0a743ea4c86f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SM: {fileID: 11868383}
+  CI: {fileID: 81444866}
+  Bug: {fileID: 21300000, guid: 0b06742f04eac4bebb17b047bf0321c9, type: 3}
+  BugName: Bug D
+  BugInfo: rrrr
+  Cam: {fileID: 1688981025}
+  LazyMove: 0
 --- !u!1 &862521000
 GameObject:
   m_ObjectHideFlags: 0
@@ -2349,6 +2369,7 @@ GameObject:
   - component: {fileID: 862521001}
   - component: {fileID: 862521002}
   - component: {fileID: 862521003}
+  - component: {fileID: 862521004}
   m_Layer: 0
   m_Name: Back Button
   m_TagString: Untagged
@@ -2458,9 +2479,34 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 0}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 862521004}
+        m_MethodName: ReturnToMusicPlayer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &862521004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 862521000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c5589c7e93e4460785e3ba649d30ab4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SM: {fileID: 0}
+  Cam: {fileID: 1688981025}
 --- !u!1 &869965077
 GameObject:
   m_ObjectHideFlags: 0
@@ -4663,6 +4709,7 @@ GameObject:
   - component: {fileID: 2012950763}
   - component: {fileID: 2012950765}
   - component: {fileID: 2012950764}
+  - component: {fileID: 2012950766}
   m_Layer: 5
   m_Name: BUTTON1 (2)
   m_TagString: Untagged
@@ -4773,16 +4820,16 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 2012950764}
+  m_TargetGraphic: {fileID: 1017324132}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: 
+      - m_Target: {fileID: 2012950766}
+        m_MethodName: ChangeScenePosition
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -4827,6 +4874,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2012950760}
   m_CullTransparentMesh: 0
+--- !u!114 &2012950766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2012950760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5f366dd099304b1a81e0a743ea4c86f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SM: {fileID: 11868383}
+  CI: {fileID: 81444866}
+  Bug: {fileID: 21300000, guid: 0b06742f04eac4bebb17b047bf0321c9, type: 3}
+  BugName: Bug C
+  BugInfo: eee
+  Cam: {fileID: 1688981025}
+  LazyMove: 0
 --- !u!1 &2013049495
 GameObject:
   m_ObjectHideFlags: 0
@@ -4919,6 +4985,7 @@ GameObject:
   - component: {fileID: 2013898455}
   - component: {fileID: 2013898457}
   - component: {fileID: 2013898456}
+  - component: {fileID: 2013898458}
   m_Layer: 5
   m_Name: BUTTON1 (1)
   m_TagString: Untagged
@@ -5029,16 +5096,16 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 2013898456}
+  m_TargetGraphic: {fileID: 1017324132}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: 
+      - m_Target: {fileID: 2013898458}
+        m_MethodName: ChangeScenePosition
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -5083,6 +5150,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2013898452}
   m_CullTransparentMesh: 0
+--- !u!114 &2013898458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2013898452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5f366dd099304b1a81e0a743ea4c86f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SM: {fileID: 11868383}
+  CI: {fileID: 81444866}
+  Bug: {fileID: 21300000, guid: 0b06742f04eac4bebb17b047bf0321c9, type: 3}
+  BugName: Bug B
+  BugInfo: werwere
+  Cam: {fileID: 1688981025}
+  LazyMove: 0
 --- !u!1 &2098177213
 GameObject:
   m_ObjectHideFlags: 0
