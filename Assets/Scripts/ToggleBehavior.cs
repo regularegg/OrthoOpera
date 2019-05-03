@@ -5,8 +5,20 @@ using UnityEngine.UI;
 
 public class ToggleBehavior : MonoBehaviour
 {
-    //Purpose: Controls the toggle for 
-    //How it works:  
+    /*
+     
+    ////////////////////////////////////////INSTRUCTIONS////////////////////////////////////////
+    
+    PURPOSE: Toggles the weather conditions
+    HOW IT WORKS: Makes a button act like a toggle. When clicked, it will tell the SceneManager to change the weather 
+                  condition that it is responsible for.
+    USEAGE: 1. Put it on a Toggle Button.
+            2. Set the Image toggle to itself
+            3. Set the toggleLeft to the sprite that shows the toggle left position and do the same for ToggleRight
+            4. Go into the button component and set OnClick() to this script's SwitchDataWeather() or SwitchDataTime().
+            
+            
+    */ 
     
     public SceneManager SM;
 

@@ -4,84 +4,93 @@ using UnityEngine;
 
 public class MusicPlayer : MonoBehaviour
 {
-    //Say thing that it's attached to, and how it functions
+    /*
+     
+    ////////////////////////////////////////INSTRUCTIONS////////////////////////////////////////
     
-    //Loops through time and plays each sound that is within that time
+    PURPOSE: Keeps track of each which type of audio to play, depending on the weather conditions.
+             It also loops the play head.
+    HOW IT WORKS: When SceneManager changes the conditions of the environment, it 
+                  gives each IndividualAudioPlayer the correct type of audio to play.
+    USEAGE: 1. Put it on a game manager.
+            2. Drag the audio clips for each sound into the corresponding AudioClip array
+            3. Drag the corresponding IndividualAudioPlayer into the AudioPlayers array.
+            
+            
+    */
 
-
+    //Playhead object components
     public GameObject playerIndicator;
-
     public Vector3 startPos, endPos;
+    public float speed = 0.5f;
 
-    public bool Raining;
+    //Weather condition booleans
+    private bool _Raining;
+    public bool Raining
+    {
+        get { return _Raining; }
+        set
+        {
+            ChangeSound();
+            _Raining = value;
+        }
+    }
+    private bool _Daytime;
+    public bool Daytime
+    
+    {
+        get { return _Daytime; }
+        set
+        {
+            ChangeSound();
+            _Daytime = value;
+        }
+    }
 
-    public bool Daytime;
-
-    public bool[] tracks;
+    //Amount of insect tracks that we have
+    public int AmountOfInsects;
+    
+    //Individual AudioPlayers that it keeps track of
+    public IndividualAudioPlayer[] AudioPlayers;
 
     //Tracks to store audio clips
-    public int amountOfTracks; 
     public AudioClip[] DayRain;
     public AudioClip[] DayNoRain;
     public AudioClip[] NightRain;
     public AudioClip[] NightNoRain;
 
-    private AudioClip[] CurrentlyPlaying;
     
-    //value of on/off for each insect
-    public bool[] Insect0;
-    public bool[] Insect1;
-    public bool[] Insect2;
-    public bool[] Insect3;
-
-    
-    public int Insect0_amount, Insect1_amount, Insect2_amount, Insect3_amount;
+    //TESTING PURPOSES:
+    public bool TESTING_MODE;
     private AudioClip tester;
 
+    public int amountOfTracks; 
     public AudioSource[] AudioTracks;
 
     public float loopTime = 0;
 
     public AudioSource[] insects;
 
-    public float speed = 0.5f;
-    // Start is called before the first frame update
+    
+    
     void Start()
     {
-        Insect0 = new bool[Insect0_amount];
-        Insect1 = new bool[Insect1_amount];
-        Insect2 = new bool[Insect2_amount];
-        Insect3 = new bool[Insect3_amount];
+        //Array of bools that tell you whether each chunk of insect is playing sound or silence
         //enable all tracks by default
-        for (int i = 0; i < amountOfTracks; i++)
+        if (TESTING_MODE)
         {
-            //sets the current clip to play to "Day No Rain"
-            tracks[i] = true;
-            AudioTracks[i].clip = DayNoRain[i];
-            AudioTracks[i].Play();
-            if (loopTime < DayNoRain[i].length)
+            for (int i = 0; i < amountOfTracks; i++)
             {
-                loopTime = DayNoRain[i].length;
+                //sets the current clip to play to "Day No Rain"
+                AudioTracks[i].clip = DayNoRain[i];
+                AudioTracks[i].Play();
+                if (loopTime < DayNoRain[i].length)
+                {
+                    loopTime = DayNoRain[i].length;
+                }
             }
         }
 
-        
-        for (int i = 0; i < Insect0_amount; i++)
-        {
-            Insect0[i] = false;
-        }
-        for (int i = 0; i < Insect1_amount; i++)
-        {
-            Insect0[i] = false;
-        }
-        for (int i = 0; i < Insect2_amount; i++)
-        {
-            Insect0[i] = false;
-        }
-        for (int i = 0; i < Insect3_amount; i++)
-        {
-            Insect0[i] = false;
-        }
         //Saves the starting position of the playhead
         startPos = playerIndicator.transform.position;
         
@@ -89,7 +98,8 @@ public class MusicPlayer : MonoBehaviour
         Raining = false;
     }
 
-    // Update is called once per frame
+    
+    
     void Update()
     {
         //Moves playhead
@@ -99,56 +109,39 @@ public class MusicPlayer : MonoBehaviour
             playerIndicator.transform.position = startPos;
             PlaySound();
         }
-
-        //Change the array of tracks to be palying
-        if (Raining)
-        {
-            if (Daytime)
-            {
-                CurrentlyPlaying = DayRain;
-            }
-            else
-            {
-                CurrentlyPlaying = NightRain;
-            }
-        }
-        else
-        {
-            if (Daytime)
-            {
-                CurrentlyPlaying = DayNoRain;
-            }
-            else
-            {
-                CurrentlyPlaying = NightNoRain;
-            }
-            
-        }
-        
-    }
-
-    IEnumerator PlaySounds()
-    {
-        WaitForSeconds wait = new WaitForSeconds(loopTime);
-        while (true)
-        {
-            for (int i = 0; i < amountOfTracks; i++)
-            {
-                AudioTracks[i].Play();
-            }
-
-            yield return wait;
-        }
     }
     
     void ChangeSound()
     {
+        //Temporary holder clip
+        AudioClip[] clips = new AudioClip[AmountOfInsects];
+        
+        //Determines which type of audio clip to play
+        if (Daytime && Raining)
+        {
+            clips = DayRain;
+        }
+        else if (Daytime && !Raining)
+        {
+            clips = DayNoRain;
+        }
+        else if (!Daytime && Raining)
+        {
+            clips = NightRain;
+        }
+        else if (!Daytime && Raining)
+        {
+            clips = NightNoRain;
+        }
+        
+        //Changes the audio for each type of insect
         for (int i = 0; i < insects.Length; i++)
         {
-            
+            AudioPlayers[i].Sound = clips[i];
         }
     }
 
+    //TESTING PURPOSES
     void PlaySound()
     {
         for (int i = 0; i < amountOfTracks; i++)

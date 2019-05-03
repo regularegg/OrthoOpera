@@ -4,6 +4,14 @@ using UnityEngine;
 
 public class SceneManager : MonoBehaviour
 {
+    /*
+         ////////////////////////////////////////INSTRUCTIONS////////////////////////////////////////
+
+    PURPOSE: Keeps track of the states of the scene.
+    HOW IT WORKS: 
+    USAGE: 
+    */
+    
     private bool _day;
     public bool day
     {
@@ -74,13 +82,6 @@ public class SceneManager : MonoBehaviour
     public Sprite dayRainBG, dayNoRainBG, nightRainBG, nightNoRainBG;
 
     public SpriteRenderer skySR;
-
-    public Animator rainAnim;
-
-    public AudioClip[] InsectsRainDay;
-    public AudioClip[] InsectsSunDay;
-    public AudioClip[] InsectsRainNight;
-    public AudioClip[] InsectsSunNight;
 
     
     // Start is called before the first frame update

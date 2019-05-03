@@ -5,14 +5,24 @@ using UnityEngine.UI;
 
 public class HolderBehavior : MonoBehaviour
 {
-    public MusicPlayer MP;
-    public IndividualAudioPlayer IAP;
+    /*
+         ////////////////////////////////////////INSTRUCTIONS////////////////////////////////////////
 
-    public int bugType;
-    public int bugArrayIndex;
+    PURPOSE: A button that turns each segment of audio on and off. Also changes the sprite of that
+             segment to reflect on/off state.
+    HOW IT WORKS: When clicked, it will tell the IndividualAudioPlayer that it reports to whether or not 
+                  it this chunk of audio is on or off.
+    USAGE:  1. Put it on a button object on the canvas. 
+            2. Drag the IndividualAudioPlayer that it responds to into IAP.
+            3. Then go into the button component and set OnClick() to this script's ChangeStatus().
+            
+    */
+    
+    
+    public IndividualAudioPlayer IAP;     //The IndividualAudioPlayer that it reports to
+    public int bugArrayIndex;             //The index of the soundclip that it turns on and off
 
-    private bool _play;
-
+    private bool _play;                   //Whether or not the insect sound should be played
     public bool Play
     {
         get { return _play; }
@@ -30,39 +40,18 @@ public class HolderBehavior : MonoBehaviour
         }
     }
 
-    public Image img;
-    public Sprite playing, notPlaying;
+    public Image img;                    //The sprite renderer/image renderer
+    public Sprite playing, notPlaying;   //The two different sprites for each state
     
     // Start is called before the first frame update
     void Start()
     {
-        MP = FindObjectOfType<MusicPlayer>();
         img = GetComponent<Image>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     public void ChangeStatus()
     {
         Play = !Play;
         IAP.Playing[bugArrayIndex] = Play;
-        if (bugType == 0)
-        {
-            MP.Insect0[bugArrayIndex] = Play;
-        }else if (bugType == 1)
-        {
-            MP.Insect1[bugArrayIndex] = Play;
-        }else if (bugType == 2)
-        {
-            MP.Insect2[bugArrayIndex] = Play;
-        }
-        else
-        {
-            MP.Insect3[bugArrayIndex] = Play;
-        }
     }
 }
