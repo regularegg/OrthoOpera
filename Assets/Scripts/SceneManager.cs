@@ -7,12 +7,13 @@ public class SceneManager : MonoBehaviour
     /*
          ////////////////////////////////////////INSTRUCTIONS////////////////////////////////////////
 
-    PURPOSE: Keeps track of the states of the scene.
+    PURPOSE: Keeps track of the states of the scene. Tells Music player when states change.
     HOW IT WORKS: 
     USAGE: 
     */
 
     public Vector3 Camera_MusicPlayerScreen, Camera_InfoScreen;
+    public MusicPlayer MP;
     
     private bool _day;
     public bool day
@@ -20,6 +21,9 @@ public class SceneManager : MonoBehaviour
         get { return _day; }
         set
         {
+            //Tell music player to change day/night
+            
+            MP.Daytime = value;
             //Change bg to day/night
             if (value)
             {
@@ -43,7 +47,6 @@ public class SceneManager : MonoBehaviour
                     skySR.sprite = nightRainBG;
                 }
             }
-
             _day = value;
         }
     }
@@ -54,6 +57,9 @@ public class SceneManager : MonoBehaviour
         get { return _rain; }
         set
         {
+            //Tell Music Player to change Rain 
+            MP.Raining = value;
+            
             //Change bg to day/night
             if (value)
             {
@@ -77,6 +83,7 @@ public class SceneManager : MonoBehaviour
                     skySR.sprite = nightRainBG;
                 }
             }
+
             _rain = value;
         }
     }
@@ -91,6 +98,8 @@ public class SceneManager : MonoBehaviour
     {
         day = true;
         rain = false;
+
+        MP = GetComponent<MusicPlayer>();
     }
     
     

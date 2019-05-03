@@ -157,7 +157,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &11868382
 MonoBehaviour:
@@ -176,16 +176,37 @@ MonoBehaviour:
   endPos: {x: 4.25, y: 0.42, z: 0}
   speed: 0.05
   AmountOfInsects: 0
-  AudioPlayers: []
-  DayRain: []
-  DayNoRain: []
-  NightRain: []
-  NightNoRain: []
+  AudioPlayers:
+  - {fileID: 573881197}
+  - {fileID: 726693379}
+  - {fileID: 1328838900}
+  - {fileID: 1907257709}
+  DayRain:
+  - {fileID: 8300000, guid: fc0910842f37f4f7ea51d735675b29b1, type: 3}
+  - {fileID: 8300000, guid: fc0910842f37f4f7ea51d735675b29b1, type: 3}
+  - {fileID: 8300000, guid: fc0910842f37f4f7ea51d735675b29b1, type: 3}
+  - {fileID: 8300000, guid: fc0910842f37f4f7ea51d735675b29b1, type: 3}
+  DayNoRain:
+  - {fileID: 8300000, guid: eb8bb677db7da4c71bc7972480565869, type: 3}
+  - {fileID: 8300000, guid: eb8bb677db7da4c71bc7972480565869, type: 3}
+  - {fileID: 8300000, guid: eb8bb677db7da4c71bc7972480565869, type: 3}
+  - {fileID: 8300000, guid: eb8bb677db7da4c71bc7972480565869, type: 3}
+  NightRain:
+  - {fileID: 8300000, guid: 3e58d1366887c41e48ad7b21e60685c5, type: 3}
+  - {fileID: 8300000, guid: 3e58d1366887c41e48ad7b21e60685c5, type: 3}
+  - {fileID: 8300000, guid: 3e58d1366887c41e48ad7b21e60685c5, type: 3}
+  - {fileID: 8300000, guid: 3e58d1366887c41e48ad7b21e60685c5, type: 3}
+  NightNoRain:
+  - {fileID: 8300000, guid: 0d329340f973441939d285add1849ca3, type: 3}
+  - {fileID: 8300000, guid: 0d329340f973441939d285add1849ca3, type: 3}
+  - {fileID: 8300000, guid: 0d329340f973441939d285add1849ca3, type: 3}
+  - {fileID: 8300000, guid: 0d329340f973441939d285add1849ca3, type: 3}
   TESTING_MODE: 0
   amountOfTracks: 0
   AudioTracks: []
   loopTime: 0
   insects: []
+  testerBools: 00000000
 --- !u!114 &11868383
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -200,6 +221,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Camera_MusicPlayerScreen: {x: 0, y: 0, z: -10}
   Camera_InfoScreen: {x: 28.9, y: 0, z: -10}
+  MP: {fileID: 11868382}
   dayRainBG: {fileID: 21300000, guid: 6dedc82ca63404491bf4872e7452d464, type: 3}
   dayNoRainBG: {fileID: 21300000, guid: 5fc7484dd899044689c3c5ae8e56ff50, type: 3}
   nightRainBG: {fileID: 21300000, guid: 87b50c7bab3c54d7288e68d9eec26d03, type: 3}
@@ -619,7 +641,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IAP: {fileID: 726693379}
-  bugArrayIndex: 0
+  bugArrayIndex: 1
   img: {fileID: 0}
   playing: {fileID: 21300000, guid: e53a6c1c22d9f469aa61d338cab49e7d, type: 3}
   notPlaying: {fileID: 21300000, guid: a7e60e89fc07a48b396e09deedc63c68, type: 3}
@@ -846,7 +868,7 @@ Transform:
   m_LocalScale: {x: 0.71593, y: 0.71593, z: 0.71593}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &335070529
 GameObject:
@@ -990,7 +1012,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IAP: {fileID: 573881197}
-  bugArrayIndex: 0
+  bugArrayIndex: 1
   img: {fileID: 0}
   playing: {fileID: 21300000, guid: e53a6c1c22d9f469aa61d338cab49e7d, type: 3}
   notPlaying: {fileID: 21300000, guid: 47b7d41c2bec940ac91bf49f4a82b31c, type: 3}
@@ -1429,7 +1451,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IAP: {fileID: 1907257709}
-  bugArrayIndex: 0
+  bugArrayIndex: 2
   img: {fileID: 0}
   playing: {fileID: 21300000, guid: e53a6c1c22d9f469aa61d338cab49e7d, type: 3}
   notPlaying: {fileID: 21300000, guid: a7e60e89fc07a48b396e09deedc63c68, type: 3}
@@ -1713,7 +1735,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AS: {fileID: 0}
-  Sound: {fileID: 8300000, guid: 0d329340f973441939d285add1849ca3, type: 3}
+  Sound: {fileID: 0}
   Silence: {fileID: 8300000, guid: eb8bb677db7da4c71bc7972480565869, type: 3}
   Playing: 
   CurrentClipPlaying: 0
@@ -1795,7 +1817,7 @@ Transform:
   m_LocalScale: {x: 0.83, y: 0.83, z: 0.83}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &664256268
 GameObject:
@@ -1849,7 +1871,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IAP: {fileID: 1907257709}
-  bugArrayIndex: 0
+  bugArrayIndex: 1
   img: {fileID: 0}
   playing: {fileID: 21300000, guid: e53a6c1c22d9f469aa61d338cab49e7d, type: 3}
   notPlaying: {fileID: 21300000, guid: a7e60e89fc07a48b396e09deedc63c68, type: 3}
@@ -2515,7 +2537,7 @@ Transform:
   m_LocalScale: {x: 0.9, y: 0.9, z: 0.9}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &969112011
 GameObject:
@@ -2594,7 +2616,7 @@ Transform:
   m_LocalScale: {x: 1.5, y: 1.5, z: 0.21428753}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1017324128
 GameObject:
@@ -2900,7 +2922,7 @@ RectTransform:
   - {fileID: 664256269}
   - {fileID: 531134926}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2939,7 +2961,7 @@ Transform:
   - {fileID: 1328838898}
   - {fileID: 1907257707}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1283566793
 GameObject:
@@ -3168,7 +3190,7 @@ Transform:
   - {fileID: 1588612730}
   - {fileID: 1356663461}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1328838896
 GameObject:
@@ -3608,7 +3630,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IAP: {fileID: 726693379}
-  bugArrayIndex: 0
+  bugArrayIndex: 2
   img: {fileID: 0}
   playing: {fileID: 21300000, guid: e53a6c1c22d9f469aa61d338cab49e7d, type: 3}
   notPlaying: {fileID: 21300000, guid: a7e60e89fc07a48b396e09deedc63c68, type: 3}
@@ -3902,7 +3924,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1688981025
 GameObject:
@@ -4483,7 +4505,7 @@ Transform:
   m_LocalScale: {x: 1.7219, y: 1.7219, z: 1.7219}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2012950760
 GameObject:
@@ -4673,7 +4695,7 @@ GameObject:
   - component: {fileID: 2013049497}
   - component: {fileID: 2013049496}
   m_Layer: 0
-  m_Name: PlayerIndicator
+  m_Name: Playhead Indicator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4739,7 +4761,7 @@ Transform:
   m_LocalScale: {x: 0.78995246, y: 1.781595, z: 1.3446}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2013898452
 GameObject:
@@ -5049,7 +5071,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IAP: {fileID: 1328838900}
-  bugArrayIndex: 0
+  bugArrayIndex: 1
   img: {fileID: 0}
   playing: {fileID: 21300000, guid: e53a6c1c22d9f469aa61d338cab49e7d, type: 3}
   notPlaying: {fileID: 21300000, guid: 47b7d41c2bec940ac91bf49f4a82b31c, type: 3}

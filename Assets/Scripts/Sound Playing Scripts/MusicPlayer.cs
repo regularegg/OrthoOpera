@@ -61,41 +61,16 @@ public class MusicPlayer : MonoBehaviour
 
     
     //TESTING PURPOSES:
-    public bool TESTING_MODE;
-    private AudioClip tester;
-
-    public int amountOfTracks; 
-    public AudioSource[] AudioTracks;
-
-    public float loopTime = 0;
-
-    public AudioSource[] insects;
+    
+    public bool[] testerBools;
 
     
     
     void Start()
     {
-        //Array of bools that tell you whether each chunk of insect is playing sound or silence
-        //enable all tracks by default
-        if (TESTING_MODE)
-        {
-            for (int i = 0; i < amountOfTracks; i++)
-            {
-                //sets the current clip to play to "Day No Rain"
-                AudioTracks[i].clip = DayNoRain[i];
-                AudioTracks[i].Play();
-                if (loopTime < DayNoRain[i].length)
-                {
-                    loopTime = DayNoRain[i].length;
-                }
-            }
-        }
 
         //Saves the starting position of the playhead
         startPos = playerIndicator.transform.position;
-        
-        Daytime = true;
-        Raining = false;
     }
 
     
@@ -107,7 +82,6 @@ public class MusicPlayer : MonoBehaviour
         if (playerIndicator.transform.position.x > endPos.x)
         {
             playerIndicator.transform.position = startPos;
-            PlaySound();
         }
     }
     
@@ -120,33 +94,29 @@ public class MusicPlayer : MonoBehaviour
         if (Daytime && Raining)
         {
             clips = DayRain;
+            testerBools[0] = true;
         }
         else if (Daytime && !Raining)
         {
             clips = DayNoRain;
+            testerBools[1] = true;
         }
         else if (!Daytime && Raining)
         {
             clips = NightRain;
+            testerBools[2] = true;
         }
-        else if (!Daytime && Raining)
+        else if (!Daytime && !Raining)
         {
             clips = NightNoRain;
+            testerBools[3] = true;
         }
         
         //Changes the audio for each type of insect
-        for (int i = 0; i < insects.Length; i++)
+        for (int i = 0; i < AudioPlayers.Length; i++)
         {
+            Debug.Log(clips[i].name);
             AudioPlayers[i].Sound = clips[i];
-        }
-    }
-
-    //TESTING PURPOSES
-    void PlaySound()
-    {
-        for (int i = 0; i < amountOfTracks; i++)
-        {
-            AudioTracks[i].Play();
         }
     }
 }
