@@ -54,14 +54,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Bug.cs" />
-    <Compile Include="Assets\Scripts\ClickOnObject.cs" />
-    <Compile Include="Assets\Scripts\HolderBehavior.cs" />
-    <Compile Include="Assets\Scripts\IndividualAudioPlayer.cs" />
-    <Compile Include="Assets\Scripts\MusicPlayer.cs" />
-    <Compile Include="Assets\Scripts\PlayInsectScript.cs" />
+    <Compile Include="Assets\Scripts\Info Box scripts\ChangeInfo.cs" />
+    <Compile Include="Assets\Scripts\Info Box scripts\GoToInfobox.cs" />
+    <Compile Include="Assets\Scripts\Info Box scripts\ReturnToMainScreen.cs" />
     <Compile Include="Assets\Scripts\SceneManager.cs" />
-    <Compile Include="Assets\Scripts\ToggleBehavior.cs" />
+    <Compile Include="Assets\Scripts\Sound Playing Scripts\HolderBehavior.cs" />
+    <Compile Include="Assets\Scripts\Sound Playing Scripts\IndividualAudioPlayer.cs" />
+    <Compile Include="Assets\Scripts\Sound Playing Scripts\MusicPlayer.cs" />
+    <Compile Include="Assets\Scripts\Sound Playing Scripts\ToggleBehavior.cs" />
+    <Compile Include="Assets\Scripts\Trash\Bug.cs" />
+    <Compile Include="Assets\Scripts\Trash\ClickOnObject.cs" />
+    <Compile Include="Assets\Scripts\Trash\PlayInsectScript.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>/Users/MaryLi/Documents/SPR19/Museum/BugSoundScape/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>

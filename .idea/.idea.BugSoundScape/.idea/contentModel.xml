@@ -5,14 +5,23 @@
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="Scripts" t="Include">
-          <e p="Bug.cs" t="Include" />
-          <e p="ClickOnObject.cs" t="Include" />
-          <e p="HolderBehavior.cs" t="Include" />
-          <e p="IndividualAudioPlayer.cs" t="Include" />
-          <e p="MusicPlayer.cs" t="Include" />
-          <e p="PlayInsectScript.cs" t="Include" />
+          <e p="Info Box scripts" t="Include">
+            <e p="ChangeInfo.cs" t="Include" />
+            <e p="GoToInfobox.cs" t="Include" />
+            <e p="ReturnToMainScreen.cs" t="Include" />
+          </e>
           <e p="SceneManager.cs" t="Include" />
-          <e p="ToggleBehavior.cs" t="Include" />
+          <e p="Sound Playing Scripts" t="Include">
+            <e p="HolderBehavior.cs" t="Include" />
+            <e p="IndividualAudioPlayer.cs" t="Include" />
+            <e p="MusicPlayer.cs" t="Include" />
+            <e p="ToggleBehavior.cs" t="Include" />
+          </e>
+          <e p="Trash" t="Include">
+            <e p="Bug.cs" t="Include" />
+            <e p="ClickOnObject.cs" t="Include" />
+            <e p="PlayInsectScript.cs" t="Include" />
+          </e>
         </e>
       </e>
       <e p="BugSoundScape.sln" t="IncludeFlat" />

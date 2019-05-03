@@ -11,6 +11,8 @@ public class SceneManager : MonoBehaviour
     HOW IT WORKS: 
     USAGE: 
     */
+
+    public Vector3 Camera_MusicPlayerScreen, Camera_InfoScreen;
     
     private bool _day;
     public bool day
