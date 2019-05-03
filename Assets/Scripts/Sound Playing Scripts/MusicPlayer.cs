@@ -45,8 +45,8 @@ public class MusicPlayer : MonoBehaviour
         get { return _Raining; }
         set
         {
-            ChangeSound();
             _Raining = value;
+            ChangeSound();
         }
     }
     private bool _Daytime;
@@ -56,8 +56,8 @@ public class MusicPlayer : MonoBehaviour
         get { return _Daytime; }
         set
         {
-            ChangeSound();
             _Daytime = value;
+            ChangeSound();
         }
     }
 
@@ -92,29 +92,34 @@ public class MusicPlayer : MonoBehaviour
         AudioClip[] clips = new AudioClip[AmountOfInsects];
         
         //Determines which type of audio clip to play
-        if (Daytime && Raining)
+        if (_Daytime && _Raining)
         {
             clips = DayRain;
             BSP.Sound = BackgroundSounds[0];
-            testerBools[0] = true;
+            
+            Debug.Log("Day and rain");
         }
-        else if (Daytime && !Raining)
+        else if (_Daytime && !_Raining)
         {
             clips = DayNoRain;
             BSP.Sound = BackgroundSounds[1];
-            testerBools[1] = true;
+            Debug.Log("Day and no rain");
         }
-        else if (!Daytime && Raining)
+        else if (!_Daytime && _Raining)
         {
             clips = NightRain;
             BSP.Sound = BackgroundSounds[2];
             testerBools[2] = true;
+            
+            Debug.Log("night and rain");
         }
-        else if (!Daytime && !Raining)
+        else if (!_Daytime && !_Raining)
         {
             clips = NightNoRain;
             BSP.Sound = BackgroundSounds[3];
             testerBools[3] = true;
+            
+            Debug.Log("Night and no rain");
         }
         
         //Changes the audio for each type of insect

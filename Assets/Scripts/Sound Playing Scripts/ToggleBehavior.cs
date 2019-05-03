@@ -44,12 +44,18 @@ public class ToggleBehavior : MonoBehaviour
             _toggleL = value;
         }
     }
-    
+
+    public bool DayController;
     // Start is called before the first frame update
     void Start()
     {
         toggleL = startToggle;
         SM = FindObjectOfType<SceneManager>();
+        if (DayController)
+        {
+            toggleL = true;
+        }
+        
     }
 
     public void SwitchDataTime()
@@ -63,4 +69,5 @@ public class ToggleBehavior : MonoBehaviour
         SM.rain = !SM.rain;
         toggleL = !toggleL;
     }
+    
 }

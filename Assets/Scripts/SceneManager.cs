@@ -14,6 +14,8 @@ public class SceneManager : MonoBehaviour
 
     public Vector3 Camera_MusicPlayerScreen, Camera_InfoScreen;
     public MusicPlayer MP;
+
+    public bool day_debug, rain_debug;
     
     private bool _day;
     public bool day
@@ -23,31 +25,10 @@ public class SceneManager : MonoBehaviour
         {
             //Tell music player to change day/night
             
+            day_debug = value;
             MP.Daytime = value;
-            //Change bg to day/night
-            if (value)
-            {
-                if (rain)
-                {
-                    skySR.sprite = dayRainBG;
-                }
-                else
-                {
-                    skySR.sprite = dayNoRainBG;
-                }
-            }
-            else
-            {
-                if (rain)
-                {
-                    skySR.sprite = nightNoRainBG;
-                }
-                else
-                {
-                    skySR.sprite = nightRainBG;
-                }
-            }
             _day = value;
+            ChangeBackground();
         }
     }
     
@@ -57,34 +38,13 @@ public class SceneManager : MonoBehaviour
         get { return _rain; }
         set
         {
+            
+            rain_debug = value;
             //Tell Music Player to change Rain 
             MP.Raining = value;
-            
-            //Change bg to day/night
-            if (value)
-            {
-                if (day)
-                {
-                    skySR.sprite = dayRainBG;
-                }
-                else
-                {
-                    skySR.sprite = nightNoRainBG;
-                }
-            }
-            else
-            {
-                if (day)
-                {
-                    skySR.sprite = dayNoRainBG;
-                }
-                else
-                {
-                    skySR.sprite = nightRainBG;
-                }
-            }
-
             _rain = value;
+            
+            ChangeBackground();
         }
     }
 
@@ -99,7 +59,30 @@ public class SceneManager : MonoBehaviour
         day = true;
         rain = false;
 
+        day_debug = day;
+        rain_debug = rain;
+        
         MP = GetComponent<MusicPlayer>();
+    }
+
+    void ChangeBackground()
+    {
+        if (_day && _rain)
+        {
+            skySR.sprite = dayRainBG;
+        }
+        else if (_day && !_rain)
+        {
+            skySR.sprite = dayNoRainBG;
+        }
+        else if (!_day && _rain)
+        {
+            skySR.sprite = nightRainBG;
+        }
+        else if (!_day && !_rain)
+        {
+            skySR.sprite = nightNoRainBG;
+        }
     }
     
     

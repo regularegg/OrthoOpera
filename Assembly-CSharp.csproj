@@ -57,6 +57,7 @@
     <Compile Include="Assets\Scripts\Info Box scripts\ChangeInfo.cs" />
     <Compile Include="Assets\Scripts\Info Box scripts\GoToInfobox.cs" />
     <Compile Include="Assets\Scripts\Info Box scripts\ReturnToMainScreen.cs" />
+    <Compile Include="Assets\Scripts\Map Scripts\GoToPlayScene.cs" />
     <Compile Include="Assets\Scripts\SceneManager.cs" />
     <Compile Include="Assets\Scripts\Sound Playing Scripts\BackgroundSoundPlayer.cs" />
     <Compile Include="Assets\Scripts\Sound Playing Scripts\HolderBehavior.cs" />

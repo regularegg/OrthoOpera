@@ -10,6 +10,9 @@
             <e p="GoToInfobox.cs" t="Include" />
             <e p="ReturnToMainScreen.cs" t="Include" />
           </e>
+          <e p="Map Scripts" t="Include">
+            <e p="GoToPlayScene.cs" t="Include" />
+          </e>
           <e p="SceneManager.cs" t="Include" />
           <e p="Sound Playing Scripts" t="Include">
             <e p="BackgroundSoundPlayer.cs" t="Include" />
