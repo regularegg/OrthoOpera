@@ -58,6 +58,7 @@
     <Compile Include="Assets\Scripts\Info Box scripts\GoToInfobox.cs" />
     <Compile Include="Assets\Scripts\Info Box scripts\ReturnToMainScreen.cs" />
     <Compile Include="Assets\Scripts\SceneManager.cs" />
+    <Compile Include="Assets\Scripts\Sound Playing Scripts\BackgroundSoundPlayer.cs" />
     <Compile Include="Assets\Scripts\Sound Playing Scripts\HolderBehavior.cs" />
     <Compile Include="Assets\Scripts\Sound Playing Scripts\IndividualAudioPlayer.cs" />
     <Compile Include="Assets\Scripts\Sound Playing Scripts\MusicPlayer.cs" />

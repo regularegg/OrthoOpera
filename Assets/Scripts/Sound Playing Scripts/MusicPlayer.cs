@@ -23,6 +23,20 @@ public class MusicPlayer : MonoBehaviour
     public GameObject playerIndicator;
     public Vector3 startPos, endPos;
     public float speed = 0.5f;
+    
+    //Amount of insect tracks that we have
+    public int AmountOfInsects;
+    
+    //Individual AudioPlayers that it keeps track of
+    public IndividualAudioPlayer[] AudioPlayers;
+    public BackgroundSoundPlayer BSP;
+
+    //Tracks to store audio clips
+    public AudioClip[] DayRain;
+    public AudioClip[] DayNoRain;
+    public AudioClip[] NightRain;
+    public AudioClip[] NightNoRain;
+    public AudioClip[] BackgroundSounds;
 
     //Weather condition booleans
     private bool _Raining;
@@ -47,28 +61,15 @@ public class MusicPlayer : MonoBehaviour
         }
     }
 
-    //Amount of insect tracks that we have
-    public int AmountOfInsects;
-    
-    //Individual AudioPlayers that it keeps track of
-    public IndividualAudioPlayer[] AudioPlayers;
-
-    //Tracks to store audio clips
-    public AudioClip[] DayRain;
-    public AudioClip[] DayNoRain;
-    public AudioClip[] NightRain;
-    public AudioClip[] NightNoRain;
 
     
     //TESTING PURPOSES:
-    
     public bool[] testerBools;
 
     
     
     void Start()
     {
-
         //Saves the starting position of the playhead
         startPos = playerIndicator.transform.position;
     }
@@ -94,21 +95,25 @@ public class MusicPlayer : MonoBehaviour
         if (Daytime && Raining)
         {
             clips = DayRain;
+            BSP.Sound = BackgroundSounds[0];
             testerBools[0] = true;
         }
         else if (Daytime && !Raining)
         {
             clips = DayNoRain;
+            BSP.Sound = BackgroundSounds[1];
             testerBools[1] = true;
         }
         else if (!Daytime && Raining)
         {
             clips = NightRain;
+            BSP.Sound = BackgroundSounds[2];
             testerBools[2] = true;
         }
         else if (!Daytime && !Raining)
         {
             clips = NightNoRain;
+            BSP.Sound = BackgroundSounds[3];
             testerBools[3] = true;
         }
         

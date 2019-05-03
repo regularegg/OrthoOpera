@@ -12,6 +12,7 @@
           </e>
           <e p="SceneManager.cs" t="Include" />
           <e p="Sound Playing Scripts" t="Include">
+            <e p="BackgroundSoundPlayer.cs" t="Include" />
             <e p="HolderBehavior.cs" t="Include" />
             <e p="IndividualAudioPlayer.cs" t="Include" />
             <e p="MusicPlayer.cs" t="Include" />
