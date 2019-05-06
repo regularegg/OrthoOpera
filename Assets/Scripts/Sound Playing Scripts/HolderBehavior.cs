@@ -39,6 +39,8 @@ public class HolderBehavior : MonoBehaviour
             _play = value;
         }
     }
+    
+    public bool eightseconds;
 
     public Image img;                    //The sprite renderer/image renderer
     public Sprite playing, notPlaying;   //The two different sprites for each state
@@ -53,5 +55,17 @@ public class HolderBehavior : MonoBehaviour
     {
         Play = !Play;
         IAP.Playing[bugArrayIndex] = Play;
+        if (eightseconds)
+        {
+            if (Play)
+            {
+                IAP.ImmediatePlay();
+            }
+            else
+            {
+                IAP.ImmediateStop();
+            }
+        }
+        IAP.ChangeSprite();
     }
 }

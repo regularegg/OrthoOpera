@@ -10,4 +10,9 @@ public class GoToPlayScene : MonoBehaviour
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene("PlayScene");
     }
+    
+    public void ReturnToWorld()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene("WorldSelection");
+    }
 }

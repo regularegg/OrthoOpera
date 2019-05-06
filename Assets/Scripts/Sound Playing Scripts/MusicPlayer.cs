@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class MusicPlayer : MonoBehaviour
 {
@@ -38,6 +39,13 @@ public class MusicPlayer : MonoBehaviour
     public AudioClip[] NightNoRain;
     public AudioClip[] BackgroundSounds;
 
+    
+    //Insect sprites and corresponding texts for info box
+    public Sprite[] InsectTypes;
+    public Sprite[] InsectText;
+    public SpriteRenderer[] InsectType_SR;
+    public SpriteRenderer[] InsectText_SR;
+    
     //Weather condition booleans
     private bool _Raining;
     public bool Raining
@@ -61,17 +69,34 @@ public class MusicPlayer : MonoBehaviour
         }
     }
 
-
+    //Audio Stuff
+    public AudioMixer AM;
+    
+    public float modifier = 0.05f;
+    public float baseVol = 1f;
+    
+    private int _TracksActive;
+    public int TracksActive
+    
+    {
+        get { return _TracksActive; }
+        set
+        {
+            Debug.Log("Tracks active " + value);
+            _TracksActive = value;
+            ChangeVolume(value);
+        }
+    }
     
     //TESTING PURPOSES:
     public bool[] testerBools;
-
     
     
     void Start()
     {
         //Saves the starting position of the playhead
         startPos = playerIndicator.transform.position;
+        TracksActive = 0;
     }
 
     
@@ -96,37 +121,36 @@ public class MusicPlayer : MonoBehaviour
         {
             clips = DayRain;
             BSP.Sound = BackgroundSounds[0];
-            
-            Debug.Log("Day and rain");
         }
         else if (_Daytime && !_Raining)
         {
             clips = DayNoRain;
             BSP.Sound = BackgroundSounds[1];
-            Debug.Log("Day and no rain");
         }
         else if (!_Daytime && _Raining)
         {
             clips = NightRain;
             BSP.Sound = BackgroundSounds[2];
             testerBools[2] = true;
-            
-            Debug.Log("night and rain");
         }
         else if (!_Daytime && !_Raining)
         {
             clips = NightNoRain;
             BSP.Sound = BackgroundSounds[3];
             testerBools[3] = true;
-            
-            Debug.Log("Night and no rain");
         }
         
+        /*
         //Changes the audio for each type of insect
         for (int i = 0; i < AudioPlayers.Length; i++)
         {
-            Debug.Log(clips[i].name);
             AudioPlayers[i].Sound = clips[i];
-        }
+        }*/
+    }
+
+    public void ChangeVolume(int amount)
+    {
+        Debug.Log("Change volume " + (baseVol-(amount * modifier)));
+        AM.SetFloat("MyVolume", baseVol-(amount * modifier));
     }
 }

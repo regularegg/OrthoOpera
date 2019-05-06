@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class IndividualAudioPlayer : MonoBehaviour
 {
@@ -17,6 +18,12 @@ public class IndividualAudioPlayer : MonoBehaviour
     public int CurrentClipPlaying;
 
     public int AmountOfClips;
+
+    public MusicPlayer MP;
+
+    public Image button;
+
+    public bool active;
     
     void Start()
     {
@@ -25,12 +32,14 @@ public class IndividualAudioPlayer : MonoBehaviour
         {
             Playing[i] = false;
         }
-        CurrentClipPlaying = 0;
+        CurrentClipPlaying = -1;
         AS = GetComponent<AudioSource>();
+        MP = FindObjectOfType<MusicPlayer>();
     }
 
     void Update()
     {
+        
         //If the audioclip is still playing, do nothing.
         
         //If the audioclip is done playing, increment the index and play the next clip.
@@ -53,15 +62,75 @@ public class IndividualAudioPlayer : MonoBehaviour
             if (Playing[CurrentClipPlaying])
             {
                 AS.clip = Sound;
+                if (CurrentClipPlaying != 0)
+                {
+                    if (Playing[CurrentClipPlaying] != Playing[CurrentClipPlaying - 1])
+                    {
+                        MP.TracksActive++;
+                    }
+                }
+                else
+                {
+                    if (Playing[CurrentClipPlaying] != Playing[Playing.Length-1])
+                    {
+                        MP.TracksActive++;
+                    }
+                }
                 AS.Play();
             }
             //if the clip is off, play silence.
             else
             {
                 AS.clip = Silence;
+                if (CurrentClipPlaying != 0)
+                {
+                    if (Playing[CurrentClipPlaying] != Playing[CurrentClipPlaying - 1])
+                    {
+                        MP.TracksActive--;
+                    }
+                }
+                else
+                {
+                    if (Playing[CurrentClipPlaying] != Playing[Playing.Length-1])
+                    {
+                        MP.TracksActive--;
+                    }
+                }
                 AS.Play();
             }
         }
     }
-    
+
+    public void ChangeSprite()
+    {
+        int count = 0;
+
+        foreach (bool bug in Playing)
+        {
+            if (bug)
+            {
+                count++;
+            }
+        }
+
+        if (count != 0)
+        {
+            button.color = Color.white;
+        }
+        else
+        {
+            button.color = new Color(0.7f,0.7f,0.7f);
+        }
+    }
+
+    public void ImmediateStop()
+    {
+        AS.clip = Silence;
+        AS.Stop();
+    }
+    public void ImmediatePlay()
+    {
+        AS.clip = Sound;
+        AS.Play();
+    }
 }
