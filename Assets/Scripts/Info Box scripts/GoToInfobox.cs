@@ -21,10 +21,8 @@ public class GoToInfobox : MonoBehaviour
     public ChangeInfo CI;
     
     public Sprite Bug;
-    public string BugName, BugInfo;
+    public Sprite BugName, BugDescription;
     public GameObject Cam;
-
-    public bool LazyMove;
 
     void Start()
     {
@@ -34,20 +32,14 @@ public class GoToInfobox : MonoBehaviour
     public void ChangeScenePosition()
     {
         //Change the BugInfo screen to match the insect clicked
-        CI.BugName.text = BugName;
-        CI.BugInfo.text = BugInfo;
-        if (LazyMove)
-        {
-            
-            //Lazy Move
-            Cam.transform.position = SM.Camera_InfoScreen;
+        /*CI.BugName.text = BugName;
+        CI.BugInfo.text = BugInfo;*/
 
-        }
-        else
-        {
-            //Lerp Camera to position move
-            StartCoroutine(MoveCamera());
-        }
+        CI.InsectName.sprite = BugName;
+        CI.InsectDescription.sprite = BugDescription;
+        CI.Pics.sprite = Bug;
+        
+        StartCoroutine(MoveCamera());
         
     }
 

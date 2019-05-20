@@ -6,5 +6,6 @@ using UnityEngine.UI;
 public class ChangeInfo : MonoBehaviour
 {
     public Text BugName, BugInfo;
-    public SpriteRenderer BugPicture;
+    public SpriteRenderer InsectName, InsectDescription, Pics;
+    
 }

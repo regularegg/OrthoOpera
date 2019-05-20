@@ -37,14 +37,22 @@ public class MusicPlayer : MonoBehaviour
     public AudioClip[] DayNoRain;
     public AudioClip[] NightRain;
     public AudioClip[] NightNoRain;
-    public AudioClip[] BackgroundSounds;
 
     
     //Insect sprites and corresponding texts for info box
-    public Sprite[] InsectTypes;
-    public Sprite[] InsectText;
+    public Sprite[] DayRainInsects;
+    public Sprite[] DayNoRainInsects;
+    public Sprite[] NightRainInsects;
+    public Sprite[] NightNoRainInsects;
+    
+    public Sprite[] DayRainInsects_Name;
+    public Sprite[] DayNoRainInsects_Name;
+    public Sprite[] NightRainInsects_Name;
+    public Sprite[] NightNoRainInsects_Name;
+
+    public Sprite[] Descriptions;
     public SpriteRenderer[] InsectType_SR;
-    public SpriteRenderer[] InsectText_SR;
+    public SpriteRenderer[] InsectName_SR;
     
     //Weather condition booleans
     private bool _Raining;
@@ -115,42 +123,51 @@ public class MusicPlayer : MonoBehaviour
     {
         //Temporary holder clip
         AudioClip[] clips = new AudioClip[AmountOfInsects];
+        Sprite[] sprites = new Sprite[AmountOfInsects];
+        Sprite[] sprite_text = new Sprite[AmountOfInsects];
         
         //Determines which type of audio clip to play
         if (_Daytime && _Raining)
         {
             clips = DayRain;
-            BSP.Sound = BackgroundSounds[0];
+            sprites = DayRainInsects;
+            sprite_text = DayRainInsects_Name;
+            //BSP.Sound = BackgroundSounds[0];
         }
         else if (_Daytime && !_Raining)
         {
             clips = DayNoRain;
-            BSP.Sound = BackgroundSounds[1];
+            sprites = DayNoRainInsects;
+            sprite_text = DayNoRainInsects_Name;
+            //BSP.Sound = BackgroundSounds[1];
         }
         else if (!_Daytime && _Raining)
         {
             clips = NightRain;
-            BSP.Sound = BackgroundSounds[2];
-            testerBools[2] = true;
+            sprites = NightRainInsects;
+            sprite_text = NightRainInsects_Name;
+            //BSP.Sound = BackgroundSounds[2];
         }
         else if (!_Daytime && !_Raining)
         {
             clips = NightNoRain;
-            BSP.Sound = BackgroundSounds[3];
-            testerBools[3] = true;
+            sprites = NightNoRainInsects;
+            sprite_text = NightNoRainInsects_Name;
+            //BSP.Sound = BackgroundSounds[3];
         }
         
-        /*
+        
         //Changes the audio for each type of insect
         for (int i = 0; i < AudioPlayers.Length; i++)
         {
             AudioPlayers[i].Sound = clips[i];
-        }*/
+            InsectType_SR[i].sprite = sprites[i];
+            InsectName_SR[i].sprite = sprite_text[i];
+        }
     }
 
     public void ChangeVolume(int amount)
     {
-        Debug.Log("Change volume " + (baseVol-(amount * modifier)));
         AM.SetFloat("MyVolume", baseVol-(amount * modifier));
     }
 }
